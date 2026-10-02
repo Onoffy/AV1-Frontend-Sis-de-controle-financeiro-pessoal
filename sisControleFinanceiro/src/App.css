@@ -5,6 +5,7 @@
     --fundo: #f3f8f4;
     --texto: #1c2a21;
     --cinza: #5f6f65;
+    --branco: #ffffff;
     --borda: #d5e3d9;
     --vermelho: #b91c1c;
     --vermelho-escuro: #991b1b;
@@ -40,4 +41,165 @@ body {
 
 .topo p {
     margin: 0 0 6px;
+}
+
+.novaMovimentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+    background-color: var(--borda);
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.novaMovimentacao h2 {
+    margin: 0 0 20px 0;
+}
+
+.novaMovimentacao form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.novaMovimentacao input {
+    background-color: var(--fundo);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.novaMovimentacao button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    width: 120px;
+}
+
+.novaMovimentacao button:active {
+    filter: brightness(90%);
+}
+
+.botaoMovimentacao {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 1rem;
+}
+
+.botaoMovimentacao:hover {
+    cursor: pointer;
+}
+
+.mensagemErro {
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho-escuro);
+    border-radius: 8px;
+    padding: 6px;
+    margin: 2px;
+}
+
+.tipoMovimentacao {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.tipoMovimentacao button {
+    flex: 1;
+    padding: 14px;
+    border: transparent solid 2px;
+    transition: 0.2s ease;
+}
+
+.tipoMovimentacao button:hover {
+    border: var(--verde-escuro) solid 2px;
+    cursor: pointer;
+}
+
+.receita,
+.despesa {
+    background-color: var(--branco);
+    font-size: 1.125rem;
+    color: var(--texto);
+}
+
+.receita.selecionado {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.despesa.selecionado {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.descricaoMovimentacao {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.descricaoMovimentacao input {
+    width: 100%;
+    border: transparent solid 2px;
+    outline: none;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.descricaoMovimentacao input:focus {
+    border: var(--verde-escuro) solid 2px;
+}
+
+.valorCategoriaMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.valorMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.valorMovimentacao input {
+    border: transparent solid 2px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.valorMovimentacao input:focus {
+    border: var(--verde-escuro) solid 2px;
+}
+
+.categoriaMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoriaMovimentacao select {
+    border-radius: 8px;
+    border: transparent solid 2px;
+    width: 180px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.categoriaMovimentacao select:focus {
+    border: var(--verde-escuro) solid 2px;
 }
