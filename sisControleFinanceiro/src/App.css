@@ -203,3 +203,135 @@ body {
 .categoriaMovimentacao select:focus {
     border: var(--verde-escuro) solid 2px;
 }
+
+.historico {
+    width: 700px;
+    margin: 15px auto 30px;
+}
+
+.resumoFinanceiro {
+    background-color: var(--borda);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.resumoFinanceiro h2 {
+    margin: 0 0 8px;
+}
+
+.saldoValor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0 20px;
+}
+
+.resumo {
+    display: flex;
+    gap: 20px;
+}
+
+.resumoReceita,
+.resumoDespesa {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumoReceita {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+.resumoDespesa {
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho-escuro);
+}
+
+.historicoMovimentacoes {
+    background-color: var(--borda);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.historicoMovimentacoes>h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+
+.secaoMovimentacoes {
+    background-color: var(--branco);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.secaoMovimentacoes:last-child {
+    margin-bottom: 0;
+}
+
+.secaoMovimentacoes h3 {
+    margin: 0 0 12px;
+}
+
+
+.movimentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: var(--fundo);
+    border-left: 5px solid;
+}
+
+.movimentacao:last-child {
+    margin-bottom: 0;
+}
+
+.receitaCard {
+    border-left-color: var(--verde);
+}
+
+.despesaCard {
+    border-left-color: var(--vermelho);
+}
+
+.informacoesMovimentacao p {
+    margin: 4px 0;
+}
+
+.informacoesMovimentacao p:first-child {
+    font-size: 1.05rem;
+}
+
+.botaoRemover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botaoRemover:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.botaoRemover:active {
+    filter: brightness(90%);
+}
+
+.semMovimentacoes {
+    color: var(--cinza);
+    text-align: center;
+    margin: 10px 0;
+}
