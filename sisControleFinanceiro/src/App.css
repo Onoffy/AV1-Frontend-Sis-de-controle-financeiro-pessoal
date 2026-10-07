@@ -1,0 +1,338 @@
+:root {
+    --verde: #15803d;
+    --verde-escuro: #166534;
+    --verde-claro: #dcfce7;
+    --fundo: #f3f8f4;
+    --texto: #1c2a21;
+    --cinza: #5f6f65;
+    --branco: #ffffff;
+    --borda: #d5e3d9;
+    --vermelho: #b91c1c;
+    --vermelho-escuro: #991b1b;
+    --vermelho-claro: #fee2e2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0 0 20px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+.topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--verde);
+    text-align: center;
+    color: var(--verde-claro);
+    padding: 24px 10px;
+}
+
+.topo h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+}
+
+.topo p {
+    margin: 0 0 6px;
+}
+
+.novaMovimentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+    background-color: var(--borda);
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.novaMovimentacao h2 {
+    margin: 0 0 20px 0;
+}
+
+.novaMovimentacao form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.novaMovimentacao input {
+    background-color: var(--fundo);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+}
+
+.novaMovimentacao button {
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+    width: 120px;
+}
+
+.novaMovimentacao button:active {
+    filter: brightness(90%);
+}
+
+.botaoMovimentacao {
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 1rem;
+}
+
+.botaoMovimentacao:hover {
+    cursor: pointer;
+}
+
+.mensagemErro {
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho-escuro);
+    border-radius: 8px;
+    padding: 6px;
+    margin: 2px;
+}
+
+.tipoMovimentacao {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.tipoMovimentacao button {
+    flex: 1;
+    padding: 14px;
+    border: transparent solid 2px;
+    transition: 0.2s ease;
+}
+
+.tipoMovimentacao button:hover {
+    border: var(--verde-escuro) solid 2px;
+    cursor: pointer;
+}
+
+.receita,
+.despesa {
+    background-color: var(--branco);
+    font-size: 1.125rem;
+    color: var(--texto);
+}
+
+.receita.selecionado {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+.despesa.selecionado {
+    background-color: var(--vermelho);
+    color: var(--branco);
+}
+
+.descricaoMovimentacao {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.descricaoMovimentacao input {
+    width: 100%;
+    border: transparent solid 2px;
+    outline: none;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.descricaoMovimentacao input:focus {
+    border: var(--verde-escuro) solid 2px;
+}
+
+.valorCategoriaMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.valorMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.valorMovimentacao input {
+    border: transparent solid 2px;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.valorMovimentacao input:focus {
+    border: var(--verde-escuro) solid 2px;
+}
+
+.categoriaMovimentacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoriaMovimentacao select {
+    border-radius: 8px;
+    border: transparent solid 2px;
+    width: 180px;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.categoriaMovimentacao select:focus {
+    border: var(--verde-escuro) solid 2px;
+}
+
+.historico {
+    width: 700px;
+    margin: 15px auto 30px;
+}
+
+.resumoFinanceiro {
+    background-color: var(--borda);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.resumoFinanceiro h2 {
+    margin: 0 0 8px;
+}
+
+.saldoValor {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 5px 0 20px;
+}
+
+.resumo {
+    display: flex;
+    gap: 20px;
+}
+
+.resumoReceita,
+.resumoDespesa {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumoReceita {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+.resumoDespesa {
+    background-color: var(--vermelho-claro);
+    color: var(--vermelho-escuro);
+}
+
+.historicoMovimentacoes {
+    background-color: var(--borda);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.historicoMovimentacoes>h2 {
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+
+.secaoMovimentacoes {
+    background-color: var(--branco);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.secaoMovimentacoes:last-child {
+    margin-bottom: 0;
+}
+
+.secaoMovimentacoes h3 {
+    margin: 0 0 12px;
+}
+
+
+.movimentacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: var(--fundo);
+    border-left: 5px solid;
+}
+
+.movimentacao:last-child {
+    margin-bottom: 0;
+}
+
+.receitaCard {
+    border-left-color: var(--verde);
+}
+
+.despesaCard {
+    border-left-color: var(--vermelho);
+}
+
+.informacoesMovimentacao p {
+    margin: 4px 0;
+}
+
+.informacoesMovimentacao p:first-child {
+    font-size: 1.05rem;
+}
+
+.botaoRemover {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.botaoRemover:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.botaoRemover:active {
+    filter: brightness(90%);
+}
+
+.semMovimentacoes {
+    color: var(--cinza);
+    text-align: center;
+    margin: 10px 0;
+}
