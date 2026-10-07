@@ -25,11 +25,11 @@ function App() {
   return (
     <>
       <Cabecalho></Cabecalho>
-      <RealizarMovimentacao aoCadastrar={cadastrarMovimentacao}></RealizarMovimentacao>
       <ExibirTransacao
         transacao={movimentacoes}
         aoRemover={removerMovimentacao}>
       </ExibirTransacao>
+      <RealizarMovimentacao aoCadastrar={cadastrarMovimentacao}></RealizarMovimentacao>
     </>
   )
 }
